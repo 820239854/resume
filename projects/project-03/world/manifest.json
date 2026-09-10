@@ -1,0 +1,455 @@
+{
+  "tile": "tibet",
+  "generated": "2026-08-30T01:42:54.914Z",
+  "frame": {
+    "origin": {
+      "lat": 28.2778,
+      "lon": 85.3778
+    },
+    "mPerDegLat": 111320,
+    "mPerDegLon": 98035.18,
+    "x": "east, m = (lon - lon0) * mPerDegLon",
+    "z": "south, m = -(lat - lat0) * mPerDegLat",
+    "y": "metres above the EGM2008 geoid (Copernicus GLO-30 DSM)",
+    "extent": {
+      "x0": -29760,
+      "z0": -18030,
+      "x1": 16950,
+      "z1": 49530,
+      "spanX": 46710,
+      "spanZ": 67560
+    },
+    "bbox": {
+      "south": 27.832866,
+      "west": 85.074236,
+      "north": 28.439766,
+      "east": 85.550697
+    },
+    "grids": {
+      "coarse": {
+        "cell": 30,
+        "cols": 1558,
+        "rows": 2253,
+        "x0": -29760,
+        "z0": -18030,
+        "use": "shallow-water / flood solver; this is the grid the app downloads"
+      },
+      "fine": {
+        "cell": 10,
+        "cols": 4672,
+        "rows": 6757,
+        "x0": -29760,
+        "z0": -18030,
+        "use": "rendering detail; pure bicubic (Catmull-Rom) upsample of the coarse grid - no extra information"
+      },
+      "note": "fine.cols = 3*(coarse.cols-1)+1, fine.rows = 3*(coarse.rows-1)+1; coarse sample (i,j) is exactly fine sample (3i,3j); both grids share x0,z0."
+    },
+    "domainKm": [
+      46.71,
+      67.56
+    ]
+  },
+  "sources": {
+    "dem": "Copernicus DEM GLO-30 COG, AWS Open Data (s3://copernicus-dem-30m), tiles N27_00_E085_00 + N28_00_E085_00. WGS84 / EGM2008.",
+    "imagery": "ESRI World Imagery XYZ (z14 domain, z16 corridor, z18 towns), resampled into the local frame.",
+    "osm": "Overpass API (overpass-api.de, kumi.systems fallback), fetched 2026-08-29.",
+    "glaciers": "OpenStreetMap natural=glacier — RGI 7.0 is Earthdata-login gated and public mirrors 404ed.",
+    "floodpath": "data/flood_path.csv (DEM thalweg below the detachment) spliced onto OSM river centrelines at the dam site."
+  },
+  "counts": {
+    "floodpathPoints": 1781,
+    "floodpathLengthKm": 88.93,
+    "tributaries": 9,
+    "places": 503,
+    "storyPlaces": 26,
+    "buildingsOsm": 172518,
+    "buildingsExtra": 39,
+    "roads": 13490,
+    "bridges": 358,
+    "waterways": 2092,
+    "waterAreas": 232,
+    "landcover": 6364,
+    "glaciers": 303,
+    "glacierAreaKm2": 180.8,
+    "poi": 1323,
+    "borderWays": 16,
+    "imageryMosaics": 9,
+    "imageryTiles": 67
+  },
+  "totalBytes": 218469836,
+  "files": [
+    {
+      "file": "border.json",
+      "bytes": 4142848,
+      "schema": "FeatureCollection, OSM boundary=administrative admin_level=2 (the China–Nepal border)."
+    },
+    {
+      "file": "bridges.json",
+      "bytes": 78812,
+      "schema": "FeatureCollection, OSM bridge=* ways (a subset of roads.json plus waterway bridges)."
+    },
+    {
+      "file": "buildings-extra.json",
+      "bytes": 40501,
+      "schema": "FeatureCollection, 39 HAND-DIGITISED footprints for the border crossing where OSM has nothing. class ∈ port|customs|warehouse|residential|hotel|powerhouse|shed|parking. class=\"parking\" features are surfaces (height 0), not buildings."
+    },
+    {
+      "file": "buildings.json",
+      "bytes": 42176257,
+      "schema": "FeatureCollection, OSM building=* footprints (polygons) with name/levels/height/material tags."
+    },
+    {
+      "file": "check-overlay.png",
+      "bytes": 4495843,
+      "schema": "The hillshade with the flood path, tributaries, OSM rivers and story places drawn on it — for eyeballing alignment."
+    },
+    {
+      "file": "floodpath.json",
+      "bytes": 91239,
+      "schema": "{points:[[x,z,y,s],…] every 50 m, tributaries:[{id,name,line:[[x,z],…],confluence,catchmentAreaKm2,monsoon_discharge_m3s}], mainStemCatchment, reaches}. y = lowest GLO-30 value within 60 m, clamped monotonically non-increasing; s = chainage in metres from the detachment."
+    },
+    {
+      "file": "glaciers-osm.json",
+      "bytes": 643390,
+      "schema": "The raw natural=glacier subset split out of landcover — the input to glaciers.json."
+    },
+    {
+      "file": "glaciers.json",
+      "bytes": 689059,
+      "schema": "FeatureCollection, glacier polygons with areaKm2, centroid and distanceToDetachmentM. Source: OSM (RGI 7.0 is login-gated — see rgiStatus)."
+    },
+    {
+      "file": "imagery/corridor-z16/0_14.jpg",
+      "bytes": 733069
+    },
+    {
+      "file": "imagery/corridor-z16/0_15.jpg",
+      "bytes": 720237
+    },
+    {
+      "file": "imagery/corridor-z16/0_16.jpg",
+      "bytes": 366839
+    },
+    {
+      "file": "imagery/corridor-z16/1_12.jpg",
+      "bytes": 656192
+    },
+    {
+      "file": "imagery/corridor-z16/1_13.jpg",
+      "bytes": 724815
+    },
+    {
+      "file": "imagery/corridor-z16/1_14.jpg",
+      "bytes": 758838
+    },
+    {
+      "file": "imagery/corridor-z16/1_15.jpg",
+      "bytes": 739847
+    },
+    {
+      "file": "imagery/corridor-z16/1_16.jpg",
+      "bytes": 392095
+    },
+    {
+      "file": "imagery/corridor-z16/10_2.jpg",
+      "bytes": 591484
+    },
+    {
+      "file": "imagery/corridor-z16/10_3.jpg",
+      "bytes": 689981
+    },
+    {
+      "file": "imagery/corridor-z16/10_4.jpg",
+      "bytes": 555599
+    },
+    {
+      "file": "imagery/corridor-z16/11_2.jpg",
+      "bytes": 310987
+    },
+    {
+      "file": "imagery/corridor-z16/11_3.jpg",
+      "bytes": 283369
+    },
+    {
+      "file": "imagery/corridor-z16/11_4.jpg",
+      "bytes": 194357
+    },
+    {
+      "file": "imagery/corridor-z16/2_10.jpg",
+      "bytes": 634288
+    },
+    {
+      "file": "imagery/corridor-z16/2_11.jpg",
+      "bytes": 638580
+    },
+    {
+      "file": "imagery/corridor-z16/2_12.jpg",
+      "bytes": 577941
+    },
+    {
+      "file": "imagery/corridor-z16/2_13.jpg",
+      "bytes": 585740
+    },
+    {
+      "file": "imagery/corridor-z16/2_14.jpg",
+      "bytes": 553495
+    },
+    {
+      "file": "imagery/corridor-z16/2_9.jpg",
+      "bytes": 699127
+    },
+    {
+      "file": "imagery/corridor-z16/3_10.jpg",
+      "bytes": 671341
+    },
+    {
+      "file": "imagery/corridor-z16/3_11.jpg",
+      "bytes": 658522
+    },
+    {
+      "file": "imagery/corridor-z16/3_12.jpg",
+      "bytes": 539078
+    },
+    {
+      "file": "imagery/corridor-z16/3_9.jpg",
+      "bytes": 674026
+    },
+    {
+      "file": "imagery/corridor-z16/4_8.jpg",
+      "bytes": 718571
+    },
+    {
+      "file": "imagery/corridor-z16/4_9.jpg",
+      "bytes": 613782
+    },
+    {
+      "file": "imagery/corridor-z16/5_7.jpg",
+      "bytes": 723606
+    },
+    {
+      "file": "imagery/corridor-z16/5_8.jpg",
+      "bytes": 727207
+    },
+    {
+      "file": "imagery/corridor-z16/5_9.jpg",
+      "bytes": 690862
+    },
+    {
+      "file": "imagery/corridor-z16/6_4.jpg",
+      "bytes": 496733
+    },
+    {
+      "file": "imagery/corridor-z16/6_5.jpg",
+      "bytes": 489472
+    },
+    {
+      "file": "imagery/corridor-z16/6_6.jpg",
+      "bytes": 553700
+    },
+    {
+      "file": "imagery/corridor-z16/6_7.jpg",
+      "bytes": 674580
+    },
+    {
+      "file": "imagery/corridor-z16/6_8.jpg",
+      "bytes": 692533
+    },
+    {
+      "file": "imagery/corridor-z16/7_2.jpg",
+      "bytes": 528842
+    },
+    {
+      "file": "imagery/corridor-z16/7_3.jpg",
+      "bytes": 681521
+    },
+    {
+      "file": "imagery/corridor-z16/7_4.jpg",
+      "bytes": 506541
+    },
+    {
+      "file": "imagery/corridor-z16/7_5.jpg",
+      "bytes": 529415
+    },
+    {
+      "file": "imagery/corridor-z16/7_6.jpg",
+      "bytes": 578846
+    },
+    {
+      "file": "imagery/corridor-z16/8_2.jpg",
+      "bytes": 708630
+    },
+    {
+      "file": "imagery/corridor-z16/8_3.jpg",
+      "bytes": 642121
+    },
+    {
+      "file": "imagery/corridor-z16/8_4.jpg",
+      "bytes": 734537
+    },
+    {
+      "file": "imagery/corridor-z16/9_2.jpg",
+      "bytes": 620071
+    },
+    {
+      "file": "imagery/corridor-z16/9_3.jpg",
+      "bytes": 654037
+    },
+    {
+      "file": "imagery/corridor-z16/9_4.jpg",
+      "bytes": 747494
+    },
+    {
+      "file": "imagery/domain-z14/0_0.jpg",
+      "bytes": 851738
+    },
+    {
+      "file": "imagery/domain-z14/0_1.jpg",
+      "bytes": 735306
+    },
+    {
+      "file": "imagery/domain-z14/0_2.jpg",
+      "bytes": 696526
+    },
+    {
+      "file": "imagery/domain-z14/0_3.jpg",
+      "bytes": 665606
+    },
+    {
+      "file": "imagery/domain-z14/0_4.jpg",
+      "bytes": 99676
+    },
+    {
+      "file": "imagery/domain-z14/1_0.jpg",
+      "bytes": 742855
+    },
+    {
+      "file": "imagery/domain-z14/1_1.jpg",
+      "bytes": 672266
+    },
+    {
+      "file": "imagery/domain-z14/1_2.jpg",
+      "bytes": 682532
+    },
+    {
+      "file": "imagery/domain-z14/1_3.jpg",
+      "bytes": 699037
+    },
+    {
+      "file": "imagery/domain-z14/1_4.jpg",
+      "bytes": 93251
+    },
+    {
+      "file": "imagery/domain-z14/2_0.jpg",
+      "bytes": 632590
+    },
+    {
+      "file": "imagery/domain-z14/2_1.jpg",
+      "bytes": 624817
+    },
+    {
+      "file": "imagery/domain-z14/2_2.jpg",
+      "bytes": 576472
+    },
+    {
+      "file": "imagery/domain-z14/2_3.jpg",
+      "bytes": 585622
+    },
+    {
+      "file": "imagery/domain-z14/2_4.jpg",
+      "bytes": 78258
+    },
+    {
+      "file": "imagery/index.json",
+      "bytes": 15940,
+      "schema": "Mosaic index: {mosaics:[{id, source, zoom, res, extent:{x0,z0,x1,z1}, tiles:[{file,x0,z0,px,py,bytes}]}]}. Every mosaic is resampled INTO the local frame: pixel (px,py) of a tile covers x = tile.x0 + (px+0.5)*res, z = tile.z0 + (py+0.5)*res."
+    },
+    {
+      "file": "imagery/post-event.jpg",
+      "bytes": 3430612,
+      "schema": "Sentinel-2 L2A composite of 27 Aug 2026 (the day after the flood), 10 m/px in the local frame, ~70-80% cloud. The flood scar is visible along the Trishuli."
+    },
+    {
+      "file": "imagery/towns/betrawati.jpg",
+      "bytes": 1358974
+    },
+    {
+      "file": "imagery/towns/gyirong-port.jpg",
+      "bytes": 3099204
+    },
+    {
+      "file": "imagery/towns/kyirong-town.jpg",
+      "bytes": 2841209
+    },
+    {
+      "file": "imagery/towns/syabrubesi.jpg",
+      "bytes": 2708657
+    },
+    {
+      "file": "imagery/towns/timure.jpg",
+      "bytes": 1984846
+    },
+    {
+      "file": "imagery/towns/trishuli-bazaar.jpg",
+      "bytes": 4053061
+    },
+    {
+      "file": "landcover.json",
+      "bytes": 8318704,
+      "schema": "FeatureCollection, OSM natural=* (scree, bare_rock, wood, scrub, grassland, …) and landuse=* (farmland, residential, forest, …) polygons."
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 12498
+    },
+    {
+      "file": "places-osm.json",
+      "bytes": 3954423,
+      "schema": "Raw OSM place layer (ways/relations still as polygons) — the input to places.json."
+    },
+    {
+      "file": "places.json",
+      "bytes": 151732,
+      "schema": "FeatureCollection of Points. properties.story=true marks the narrative set, with key/class/s/offsetToPathM/confidence. All others are plain OSM place nodes."
+    },
+    {
+      "file": "poi.json",
+      "bytes": 324813,
+      "schema": "FeatureCollection, power plants/generators/substations, man_made, amenity (customs, police, hospital, school…), barrier=border_control, tourism, aeroway, historic."
+    },
+    {
+      "file": "roads.json",
+      "bytes": 10662014,
+      "schema": "FeatureCollection, OSM highway=* lines with surface/bridge/tunnel/layer/lanes/ref."
+    },
+    {
+      "file": "terrain-coarse-preview.png",
+      "bytes": 8322930,
+      "schema": "Greyscale hillshade of the coarse grid (az 315, alt 45, z-factor 1.6), 1 px per 30 m cell."
+    },
+    {
+      "file": "terrain-coarse.f32",
+      "bytes": 14040696,
+      "schema": "float32 LE, row-major, cols*rows, row 0 = north. Sample (i,j) is at x = x0 + i*30, z = z0 + j*30. Metres above the EGM2008 geoid."
+    },
+    {
+      "file": "terrain-fine.u16",
+      "bytes": 63137408,
+      "schema": "uint16 LE, row-major. height_m = offset + value*scale (see terrain.json fine.quant). Catmull-Rom 3x upsample of the coarse grid; fine(3i,3j) === coarse(i,j)."
+    },
+    {
+      "file": "terrain.json",
+      "bytes": 1652,
+      "schema": "Metadata for the two elevation grids: {origin, minY, maxY, coarse:{file,cols,rows,cell,x0,z0,...}, fine:{...,quant:{scale,offset}}}."
+    },
+    {
+      "file": "water.json",
+      "bytes": 346775,
+      "schema": "FeatureCollection, OSM natural=water / waterway=riverbank / landuse=reservoir|basin polygons."
+    },
+    {
+      "file": "waterways.json",
+      "bytes": 1646239,
+      "schema": "FeatureCollection, OSM waterway=river|stream|canal|ditch|drain|weir|dam lines."
+    }
+  ]
+}

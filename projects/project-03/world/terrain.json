@@ -1,0 +1,55 @@
+{
+  "tile": "tibet",
+  "source": {
+    "name": "Copernicus DEM GLO-30 (COG, AWS Open Data)",
+    "url": "https://copernicus-dem-30m.s3.amazonaws.com",
+    "tiles": [
+      "Copernicus_DSM_COG_10_N27_00_E085_00_DEM",
+      "Copernicus_DSM_COG_10_N28_00_E085_00_DEM"
+    ],
+    "type": "DSM (reflective surface)",
+    "nominalRes": "1 arc-second (~30.9 m N-S, ~27.2 m E-W at 28.1°N)",
+    "horizontalDatum": "WGS84 / EPSG:4326",
+    "verticalDatum": "EGM2008 geoid (NOT EGM96, NOT ellipsoidal)",
+    "resampling": "Catmull-Rom bicubic from the 1\" lattice to the local metric grid"
+  },
+  "origin": {
+    "lat": 28.2778,
+    "lon": 85.3778,
+    "mPerDegLat": 111320,
+    "mPerDegLon": 98035.18
+  },
+  "minY": 441.82,
+  "maxY": 7352.34,
+  "coarse": {
+    "file": "terrain-coarse.f32",
+    "dtype": "float32",
+    "endian": "little",
+    "cols": 1558,
+    "rows": 2253,
+    "cell": 30,
+    "x0": -29760,
+    "z0": -18030,
+    "order": "row-major, row 0 = north (z0), col 0 = west (x0); index = j*cols + i",
+    "sampleAt": "x = x0 + i*cell, z = z0 + j*cell (sample locations, not cell centres)",
+    "bytes": 14040696
+  },
+  "fine": {
+    "file": "terrain-fine.u16",
+    "dtype": "uint16",
+    "endian": "little",
+    "cols": 4672,
+    "rows": 6757,
+    "cell": 10,
+    "x0": -29760,
+    "z0": -18030,
+    "order": "row-major, row 0 = north (z0), col 0 = west (x0); index = j*cols + i",
+    "quant": {
+      "scale": 0.125,
+      "offset": 441,
+      "decode": "height_m = offset + value * scale"
+    },
+    "note": "Catmull-Rom 3x upsample of the coarse grid. fine(3i,3j) === coarse(i,j) exactly. No information beyond 30 m.",
+    "bytes": 63137408
+  }
+}

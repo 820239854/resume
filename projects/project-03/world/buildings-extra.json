@@ -1,0 +1,1743 @@
+{
+  "type": "FeatureCollection",
+  "note": "Hand-digitised footprints for the places where OSM has < 15 buildings within 500 m: Gyirong Port, Resuo village, Rasuwagadhi customs, Rasuwagadhi HEP. Local frame (x east, z south, metres). height is above local ground; base/roof are absolute metres using the GLO-30 surface. Features with class \"parking\" are SURFACES, not buildings (height 0) — skip them when extruding.",
+  "method": "See the header of pipeline/build-buildings-extra.mjs.",
+  "osmBuildingsWithin500m": {
+    "gyirong-port": 0,
+    "resuo-village": 0,
+    "rasuwagadhi": 0,
+    "rasuwagadhi-hep-headworks": 0,
+    "rasuwagadhi-hep-powerhouse": 14,
+    "timure": 54,
+    "syabrubesi": 40
+  },
+  "notDigitised": "Timure (54 OSM buildings within 500 m) and Syabrubesi (40) are above the 15-building threshold and were left to OSM.",
+  "counts": {
+    "port": 2,
+    "customs": 6,
+    "parking": 4,
+    "warehouse": 7,
+    "shed": 8,
+    "residential": 9,
+    "hotel": 1,
+    "powerhouse": 2
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "extra/0",
+      "properties": {
+        "id": "extra/0",
+        "name": "Joint inspection building",
+        "name:zh": "联检大楼",
+        "class": "port",
+        "building:levels": 5,
+        "height": 19,
+        "base": 1822.8,
+        "roof": 1841.8,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": "The 5-storey joint inspection hall — the largest roof on the port terrace, immediately above the bridge approach."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -32.3,
+              -206.1
+            ],
+            [
+              15.9,
+              -225.6
+            ],
+            [
+              22.3,
+              -209.9
+            ],
+            [
+              -25.9,
+              -190.4
+            ],
+            [
+              -32.3,
+              -206.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/1",
+      "properties": {
+        "id": "extra/1",
+        "name": "Cargo inspection hall",
+        "name:zh": "货运查验大厅",
+        "class": "customs",
+        "building:levels": 1,
+        "height": 9,
+        "base": 1820.8,
+        "roof": 1829.8,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -35.2,
+              -187.4
+            ],
+            [
+              9.3,
+              -205.4
+            ],
+            [
+              15.2,
+              -190.6
+            ],
+            [
+              -29.3,
+              -172.6
+            ],
+            [
+              -35.2,
+              -187.4
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/2",
+      "properties": {
+        "id": "extra/2",
+        "name": "Port administration block",
+        "name:zh": "口岸办公楼",
+        "class": "port",
+        "building:levels": 3,
+        "height": 12,
+        "base": 1820.5,
+        "roof": 1832.5,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.1,
+              -161.3
+            ],
+            [
+              26.3,
+              -174.8
+            ],
+            [
+              31.1,
+              -162.7
+            ],
+            [
+              -2.3,
+              -149.2
+            ],
+            [
+              -7.1,
+              -161.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/3",
+      "properties": {
+        "id": "extra/3",
+        "name": "Port gatehouse",
+        "name:zh": "口岸大门",
+        "class": "customs",
+        "building:levels": 1,
+        "height": 5,
+        "base": 1813.3,
+        "roof": 1818.3,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -52.5,
+              -229.2
+            ],
+            [
+              -28.4,
+              -238.9
+            ],
+            [
+              -23.5,
+              -226.8
+            ],
+            [
+              -47.6,
+              -217.1
+            ],
+            [
+              -52.5,
+              -229.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/4",
+      "properties": {
+        "id": "extra/4",
+        "name": "Truck and bus parking apron",
+        "name:zh": "货车停车场",
+        "class": "parking",
+        "building:levels": null,
+        "height": 0,
+        "base": 1810.8,
+        "roof": 1810.8,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": "The queueing yard in front of the port; >300 vehicles were waiting here on the morning of 26 Aug 2026."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -124.1,
+              -331.6
+            ],
+            [
+              -64.8,
+              -368.7
+            ],
+            [
+              4.1,
+              -258.4
+            ],
+            [
+              -55.2,
+              -221.3
+            ],
+            [
+              -124.1,
+              -331.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/5",
+      "properties": {
+        "id": "extra/5",
+        "name": "Port sports ground / helipad",
+        "name:zh": null,
+        "class": "parking",
+        "building:levels": null,
+        "height": 0,
+        "base": 1811.3,
+        "roof": 1811.3,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -99.7,
+              -341.9
+            ],
+            [
+              -67.5,
+              -362
+            ],
+            [
+              -46.3,
+              -328.1
+            ],
+            [
+              -78.5,
+              -308
+            ],
+            [
+              -99.7,
+              -341.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/6",
+      "properties": {
+        "id": "extra/6",
+        "name": "Border trade market row 1",
+        "name:zh": "边境贸易市场",
+        "class": "warehouse",
+        "building:levels": 1,
+        "height": 7,
+        "base": 1825.9,
+        "roof": 1832.9,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": "Reported as a ~12,000 m² border trade market; four long roofed rows plus their yard are visible."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              55.6,
+              -220.6
+            ],
+            [
+              113.1,
+              -243.8
+            ],
+            [
+              116.4,
+              -235.4
+            ],
+            [
+              58.9,
+              -212.2
+            ],
+            [
+              55.6,
+              -220.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/7",
+      "properties": {
+        "id": "extra/7",
+        "name": "Border trade market row 2",
+        "name:zh": "边境贸易市场",
+        "class": "warehouse",
+        "building:levels": 1,
+        "height": 7,
+        "base": 1824.5,
+        "roof": 1831.5,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              55.6,
+              -208.6
+            ],
+            [
+              113.1,
+              -231.8
+            ],
+            [
+              116.4,
+              -223.4
+            ],
+            [
+              58.9,
+              -200.2
+            ],
+            [
+              55.6,
+              -208.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/8",
+      "properties": {
+        "id": "extra/8",
+        "name": "Border trade market row 3",
+        "name:zh": "边境贸易市场",
+        "class": "warehouse",
+        "building:levels": 1,
+        "height": 7,
+        "base": 1822.1,
+        "roof": 1829.1,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              55.6,
+              -196.6
+            ],
+            [
+              113.1,
+              -219.8
+            ],
+            [
+              116.4,
+              -211.4
+            ],
+            [
+              58.9,
+              -188.2
+            ],
+            [
+              55.6,
+              -196.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/9",
+      "properties": {
+        "id": "extra/9",
+        "name": "Border trade market row 4",
+        "name:zh": "边境贸易市场",
+        "class": "warehouse",
+        "building:levels": 1,
+        "height": 7,
+        "base": 1821,
+        "roof": 1828,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              55.6,
+              -184.6
+            ],
+            [
+              113.1,
+              -207.8
+            ],
+            [
+              116.4,
+              -199.4
+            ],
+            [
+              58.9,
+              -176.2
+            ],
+            [
+              55.6,
+              -184.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/10",
+      "properties": {
+        "id": "extra/10",
+        "name": "Shop 1 (shop row)",
+        "name:zh": null,
+        "class": "shed",
+        "building:levels": 1,
+        "height": 6,
+        "base": 1829,
+        "roof": 1835,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": "The reported row of 6 shops facing the port road."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              83.1,
+              -251.7
+            ],
+            [
+              92.4,
+              -255.4
+            ],
+            [
+              96.9,
+              -244.3
+            ],
+            [
+              87.6,
+              -240.6
+            ],
+            [
+              83.1,
+              -251.7
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/11",
+      "properties": {
+        "id": "extra/11",
+        "name": "Shop 2 (shop row)",
+        "name:zh": null,
+        "class": "shed",
+        "building:levels": 1,
+        "height": 6,
+        "base": 1828.5,
+        "roof": 1834.5,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              93.3,
+              -255.8
+            ],
+            [
+              102.6,
+              -259.6
+            ],
+            [
+              107.1,
+              -248.4
+            ],
+            [
+              97.8,
+              -244.7
+            ],
+            [
+              93.3,
+              -255.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/12",
+      "properties": {
+        "id": "extra/12",
+        "name": "Shop 3 (shop row)",
+        "name:zh": null,
+        "class": "shed",
+        "building:levels": 1,
+        "height": 6,
+        "base": 1829.5,
+        "roof": 1835.5,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.5,
+              -259.9
+            ],
+            [
+              112.8,
+              -263.7
+            ],
+            [
+              117.3,
+              -252.6
+            ],
+            [
+              108,
+              -248.8
+            ],
+            [
+              103.5,
+              -259.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/13",
+      "properties": {
+        "id": "extra/13",
+        "name": "Shop 4 (shop row)",
+        "name:zh": null,
+        "class": "shed",
+        "building:levels": 1,
+        "height": 6,
+        "base": 1828.9,
+        "roof": 1834.9,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.7,
+              -264.1
+            ],
+            [
+              123,
+              -267.8
+            ],
+            [
+              127.5,
+              -256.7
+            ],
+            [
+              118.2,
+              -252.9
+            ],
+            [
+              113.7,
+              -264.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/14",
+      "properties": {
+        "id": "extra/14",
+        "name": "Shop 5 (shop row)",
+        "name:zh": null,
+        "class": "shed",
+        "building:levels": 1,
+        "height": 6,
+        "base": 1828.5,
+        "roof": 1834.5,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              123.9,
+              -268.2
+            ],
+            [
+              133.2,
+              -271.9
+            ],
+            [
+              137.7,
+              -260.8
+            ],
+            [
+              128.4,
+              -257
+            ],
+            [
+              123.9,
+              -268.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/15",
+      "properties": {
+        "id": "extra/15",
+        "name": "Shop 6 (shop row)",
+        "name:zh": null,
+        "class": "shed",
+        "building:levels": 1,
+        "height": 6,
+        "base": 1831.1,
+        "roof": 1837.1,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              134.1,
+              -272.3
+            ],
+            [
+              143.4,
+              -276
+            ],
+            [
+              147.9,
+              -264.9
+            ],
+            [
+              138.6,
+              -261.2
+            ],
+            [
+              134.1,
+              -272.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/16",
+      "properties": {
+        "id": "extra/16",
+        "name": "Staff residential block A",
+        "name:zh": "职工住宿楼",
+        "class": "residential",
+        "building:levels": 5,
+        "height": 16,
+        "base": 1832.3,
+        "roof": 1848.3,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": "White 4–5 storey staff residential blocks reported behind the inspection building."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              97.3,
+              -273.6
+            ],
+            [
+              121.4,
+              -283.4
+            ],
+            [
+              126.7,
+              -270.4
+            ],
+            [
+              102.6,
+              -260.6
+            ],
+            [
+              97.3,
+              -273.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/17",
+      "properties": {
+        "id": "extra/17",
+        "name": "Staff residential block B",
+        "name:zh": "职工住宿楼",
+        "class": "residential",
+        "building:levels": 5,
+        "height": 16,
+        "base": 1831.1,
+        "roof": 1847.1,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.3,
+              -268.6
+            ],
+            [
+              145.4,
+              -278.4
+            ],
+            [
+              150.7,
+              -265.4
+            ],
+            [
+              126.6,
+              -255.6
+            ],
+            [
+              121.3,
+              -268.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/18",
+      "properties": {
+        "id": "extra/18",
+        "name": "Staff residential block C",
+        "name:zh": "职工住宿楼",
+        "class": "residential",
+        "building:levels": 5,
+        "height": 16,
+        "base": 1826.4,
+        "roof": 1842.4,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              145.3,
+              -263.6
+            ],
+            [
+              169.4,
+              -273.4
+            ],
+            [
+              174.7,
+              -260.4
+            ],
+            [
+              150.6,
+              -250.6
+            ],
+            [
+              145.3,
+              -263.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/19",
+      "properties": {
+        "id": "extra/19",
+        "name": "Border police station",
+        "name:zh": "边境派出所",
+        "class": "customs",
+        "building:levels": 2,
+        "height": 9,
+        "base": 1845.6,
+        "roof": 1854.6,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.9,
+              -301.9
+            ],
+            [
+              100.1,
+              -310.9
+            ],
+            [
+              106.1,
+              -296.1
+            ],
+            [
+              83.9,
+              -287.1
+            ],
+            [
+              77.9,
+              -301.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/20",
+      "properties": {
+        "id": "extra/20",
+        "name": "Port guesthouse",
+        "name:zh": "口岸招待所",
+        "class": "hotel",
+        "building:levels": 4,
+        "height": 14,
+        "base": 1841,
+        "roof": 1855,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": "The reported 4-storey guesthouse roughly 200 m from the port gate."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.8,
+              -295.3
+            ],
+            [
+              137.2,
+              -303.5
+            ],
+            [
+              143.2,
+              -288.7
+            ],
+            [
+              122.8,
+              -280.5
+            ],
+            [
+              116.8,
+              -295.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/21",
+      "properties": {
+        "id": "extra/21",
+        "name": "Logistics warehouse 1",
+        "name:zh": null,
+        "class": "warehouse",
+        "building:levels": 1,
+        "height": 9,
+        "base": 1848.8,
+        "roof": 1857.8,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              166.1,
+              -321.9
+            ],
+            [
+              201.4,
+              -336.1
+            ],
+            [
+              211.9,
+              -310.1
+            ],
+            [
+              176.6,
+              -295.9
+            ],
+            [
+              166.1,
+              -321.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/22",
+      "properties": {
+        "id": "extra/22",
+        "name": "Logistics warehouse 2",
+        "name:zh": null,
+        "class": "warehouse",
+        "building:levels": 1,
+        "height": 9,
+        "base": 1826,
+        "roof": 1835,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              204.4,
+              -291.7
+            ],
+            [
+              235.9,
+              -304.4
+            ],
+            [
+              245.6,
+              -280.3
+            ],
+            [
+              214.1,
+              -267.6
+            ],
+            [
+              204.4,
+              -291.7
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/23",
+      "properties": {
+        "id": "extra/23",
+        "name": "Logistics warehouse 3",
+        "name:zh": null,
+        "class": "warehouse",
+        "building:levels": 1,
+        "height": 8,
+        "base": 1828.3,
+        "roof": 1836.3,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              215,
+              -308.6
+            ],
+            [
+              242.8,
+              -319.8
+            ],
+            [
+              251,
+              -299.4
+            ],
+            [
+              223.2,
+              -288.2
+            ],
+            [
+              215,
+              -308.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/24",
+      "properties": {
+        "id": "extra/24",
+        "name": "Logistics yard shed",
+        "name:zh": null,
+        "class": "shed",
+        "building:levels": 1,
+        "height": 7,
+        "base": 1820.6,
+        "roof": 1827.6,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              189.6,
+              -265.5
+            ],
+            [
+              213.7,
+              -275.2
+            ],
+            [
+              220.4,
+              -258.5
+            ],
+            [
+              196.3,
+              -248.8
+            ],
+            [
+              189.6,
+              -265.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/25",
+      "properties": {
+        "id": "extra/25",
+        "name": "Resuo village house 1",
+        "name:zh": "热索村",
+        "class": "residential",
+        "building:levels": 2,
+        "height": 7,
+        "base": 1833.9,
+        "roof": 1840.9,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": "Small cluster of houses immediately upstream of the port on the Chinese bank."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.8,
+              -273.9
+            ],
+            [
+              33.9,
+              -278.4
+            ],
+            [
+              37.2,
+              -270.1
+            ],
+            [
+              26.1,
+              -265.6
+            ],
+            [
+              22.8,
+              -273.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/26",
+      "properties": {
+        "id": "extra/26",
+        "name": "Resuo village house 2",
+        "name:zh": "热索村",
+        "class": "residential",
+        "building:levels": 2,
+        "height": 7,
+        "base": 1839.8,
+        "roof": 1846.8,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.8,
+              -285.9
+            ],
+            [
+              49.9,
+              -290.4
+            ],
+            [
+              53.2,
+              -282.1
+            ],
+            [
+              42.1,
+              -277.6
+            ],
+            [
+              38.8,
+              -285.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/27",
+      "properties": {
+        "id": "extra/27",
+        "name": "Resuo village house 3",
+        "name:zh": "热索村",
+        "class": "residential",
+        "building:levels": 2,
+        "height": 7,
+        "base": 1836.5,
+        "roof": 1843.5,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              50.8,
+              -271.9
+            ],
+            [
+              61.9,
+              -276.4
+            ],
+            [
+              65.2,
+              -268.1
+            ],
+            [
+              54.1,
+              -263.6
+            ],
+            [
+              50.8,
+              -271.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/28",
+      "properties": {
+        "id": "extra/28",
+        "name": "Resuo village house 4",
+        "name:zh": "热索村",
+        "class": "residential",
+        "building:levels": 2,
+        "height": 7,
+        "base": 1842.4,
+        "roof": 1849.4,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.8,
+              -293.9
+            ],
+            [
+              39.9,
+              -298.4
+            ],
+            [
+              43.2,
+              -290.1
+            ],
+            [
+              32.1,
+              -285.6
+            ],
+            [
+              28.8,
+              -293.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/29",
+      "properties": {
+        "id": "extra/29",
+        "name": "Resuo village house 5",
+        "name:zh": "热索村",
+        "class": "residential",
+        "building:levels": 2,
+        "height": 7,
+        "base": 1847.8,
+        "roof": 1854.8,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44.8,
+              -301.9
+            ],
+            [
+              55.9,
+              -306.4
+            ],
+            [
+              59.2,
+              -298.1
+            ],
+            [
+              48.1,
+              -293.6
+            ],
+            [
+              44.8,
+              -301.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/30",
+      "properties": {
+        "id": "extra/30",
+        "name": "Resuo village house 6",
+        "name:zh": "热索村",
+        "class": "residential",
+        "building:levels": 2,
+        "height": 7,
+        "base": 1836.5,
+        "roof": 1843.5,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.8,
+              -289.9
+            ],
+            [
+              25.9,
+              -294.4
+            ],
+            [
+              29.2,
+              -286.1
+            ],
+            [
+              18.1,
+              -281.6
+            ],
+            [
+              14.8,
+              -289.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/31",
+      "properties": {
+        "id": "extra/31",
+        "name": "Nepal customs & immigration building",
+        "name:zh": null,
+        "class": "customs",
+        "building:levels": 3,
+        "height": 12,
+        "base": 1817.6,
+        "roof": 1829.6,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": "The large courtyard building on the Nepali bank at the bridgehead; the customs office destroyed on 26 Aug 2026."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -11.1,
+              -6.1
+            ],
+            [
+              20.8,
+              -17.7
+            ],
+            [
+              33.1,
+              16.1
+            ],
+            [
+              1.2,
+              27.7
+            ],
+            [
+              -11.1,
+              -6.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/32",
+      "properties": {
+        "id": "extra/32",
+        "name": "Blue-roofed border office",
+        "name:zh": null,
+        "class": "customs",
+        "building:levels": 2,
+        "height": 8,
+        "base": 1821.8,
+        "roof": 1829.8,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17,
+              -41.6
+            ],
+            [
+              35.8,
+              -48.5
+            ],
+            [
+              41,
+              -34.4
+            ],
+            [
+              22.2,
+              -27.5
+            ],
+            [
+              17,
+              -41.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/33",
+      "properties": {
+        "id": "extra/33",
+        "name": "Armed Police Force post",
+        "name:zh": null,
+        "class": "customs",
+        "building:levels": 2,
+        "height": 8,
+        "base": 1808.1,
+        "roof": 1816.1,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -49.7,
+              32.9
+            ],
+            [
+              -28.1,
+              25.1
+            ],
+            [
+              -22.3,
+              41.1
+            ],
+            [
+              -43.9,
+              48.9
+            ],
+            [
+              -49.7,
+              32.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/34",
+      "properties": {
+        "id": "extra/34",
+        "name": "Customs yard shed",
+        "name:zh": null,
+        "class": "shed",
+        "building:levels": 1,
+        "height": 6,
+        "base": 1828.8,
+        "roof": 1834.8,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -21.5,
+              60.8
+            ],
+            [
+              10.4,
+              49.1
+            ],
+            [
+              15.5,
+              63.2
+            ],
+            [
+              -16.4,
+              74.9
+            ],
+            [
+              -21.5,
+              60.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/35",
+      "properties": {
+        "id": "extra/35",
+        "name": "Customs inspection yard",
+        "name:zh": null,
+        "class": "parking",
+        "building:levels": null,
+        "height": 0,
+        "base": 1816.3,
+        "roof": 1816.3,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -49.8,
+              81.5
+            ],
+            [
+              -29.1,
+              74
+            ],
+            [
+              -20.2,
+              98.5
+            ],
+            [
+              -40.9,
+              106
+            ],
+            [
+              -49.8,
+              81.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/36",
+      "properties": {
+        "id": "extra/36",
+        "name": "Cargo apron",
+        "name:zh": null,
+        "class": "parking",
+        "building:levels": null,
+        "height": 0,
+        "base": 1830.3,
+        "roof": 1830.3,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -30.1,
+              111.7
+            ],
+            [
+              -2.8,
+              101.8
+            ],
+            [
+              6.1,
+              126.3
+            ],
+            [
+              -21.2,
+              136.2
+            ],
+            [
+              -30.1,
+              111.7
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/37",
+      "properties": {
+        "id": "extra/37",
+        "name": "Rasuwagadhi HEP headworks",
+        "name:zh": null,
+        "class": "powerhouse",
+        "building:levels": 1,
+        "height": 12,
+        "base": 1765.1,
+        "roof": 1777.1,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": "Mapped in OSM as way/1552793903 destroyed:building=industrial; footprint approximated from that way."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -91.2,
+              462.2
+            ],
+            [
+              -48.9,
+              446.8
+            ],
+            [
+              -42.8,
+              463.8
+            ],
+            [
+              -85.1,
+              479.2
+            ],
+            [
+              -91.2,
+              462.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "extra/38",
+      "properties": {
+        "id": "extra/38",
+        "name": "Rasuwagadhi HEP powerhouse",
+        "name:zh": null,
+        "class": "powerhouse",
+        "building:levels": 2,
+        "height": 16,
+        "base": 1637,
+        "roof": 1653,
+        "source": "hand-digitised from ESRI World Imagery z18 (pre-event)",
+        "confidence": "approximate (±10 m position, ±15% size); function from Chinese-language reporting",
+        "note": "Centroid of OSM way/1553358447 (power=plant); building outline approximated — OSM maps only 14 buildings within 500 m."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1938.7,
+              4628.9
+            ],
+            [
+              -1879.6,
+              4618.5
+            ],
+            [
+              -1875.3,
+              4643.1
+            ],
+            [
+              -1934.4,
+              4653.5
+            ],
+            [
+              -1938.7,
+              4628.9
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
