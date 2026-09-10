@@ -34,10 +34,13 @@ npm run build
 翻译内容保存在 `translations-zh.json` 和 `translations-notes-zh.json`；其余界面词条位于 `scripts/localize-zh.py`。运行 `python scripts/localize-zh.py` 后执行 `npm run build` 即可重新生成中文版。英文输入副本保存在 `localization/`，不包含在网站运行文件中。
 
 ## Personal homepage
-The root is a Paco.me-inspired personal homepage. Edit src/site.js for provisional profile text. Project routes: projects/silo/, projects/project-02/, projects/project-03/. The latter two are independent placeholders. Shared presentation is public/portfolio.css. Run npm run build before publishing dist/client.
+The root is a Paco.me-inspired personal homepage. Edit src/site.js for provisional profile text. Project routes: projects/silo/, projects/project-02/, projects/project-03/. The latter two host the armory and flood demonstrations. Shared presentation is public/portfolio.css. Run npm run build before publishing dist/client.
 
 
 ## Additional project replicas
 - projects/project-02/: Red Alert Armory. Source: https://www.yadongxie.com/lab/tanks . The original publicly served TankViewer component, styling and models are reused, with a standalone React entry and local paths. This is a replica, not an original portfolio work. Model credits remain in the viewer. Several models are CC BY 4.0; tacticalassaultmods Allied structures are CC BY-NC 4.0. Preserve individual source and license links; do not treat all assets as one license.
 - projects/project-03/: terrain/flood visualisation. Source: https://tibetflood.qualityf2p.workers.dev/ . Original runtime, Copernicus terrain and imagery/map datasets are served locally. Original About panel and dataset attributions are retained. Its event narrative is source content and has not been independently fact-checked.
-The two pages retain the original English interface. Homepage labels and back links are Chinese. No runtime hotlinking is required.
+The two pages now use Chinese interfaces, model/part descriptions, timeline narratives and map labels. Page author/source links have been removed as requested. No runtime hotlinking is required.
+
+## Additional Chinese localization
+Run `node scripts/localize-additional.mjs` to rebuild the two JS bundles from localization/additional/*-en.js and *-zh.json. Chinese map labels are stored as name:zh in world/places.json; additional names without provided Chinese forms use phonetic Chinese renderings recorded in localization/additional/places-zh.json. The script changes text literals and removes the creator button/dialog while preserving renderer keys, CSS class names and asset URLs.

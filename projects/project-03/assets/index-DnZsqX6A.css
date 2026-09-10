@@ -2,3 +2,8 @@
 
 /* Keep wrapped controls reachable at narrow viewport widths. */
 @media(max-width:760px){#ui .bottom:not(.folded) .controls{max-height:160px}#ui .caption,#ui.mobile .caption{bottom:230px}#ui .overlay{z-index:300}.portfolio-back{z-index:11!important}}
+
+/* Chinese labels and clocks */
+#ui .place,#ui .caption .label{letter-spacing:.06em}#ui .clock{font-size:11px}@media(max-width:760px){#ui .top{gap:8px;padding:12px}#ui .clock{font-size:9px;padding:6px}#ui .place{font-size:11px;max-width:120px}#ui .caption{line-height:1.7}}
+
+body:has(#ui .overlay.on) .portfolio-back{visibility:hidden}
