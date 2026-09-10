@@ -1,2 +1,9 @@
-# resume-pages-test
-Minimal static page for GitHub Pages connectivity testing
+# 地堡 · 交互式 3D 剖面
+
+中文版静态网页：https://820239854.github.io/resume-pages-test/
+
+支持 18 / 17 号地堡切换、144 层剖面、楼层介绍、镜头控制和手机布局。
+
+基于 https://3dscenes.qualityf2p.workers.dev/silo 的公开前端资源本地化，原作者为 @Nal_uh。本仓库不是从零编写的模型工程；原始资源的权利属于相应权利人。
+
+中文化包含界面、地点详情、楼层提示、轮播知识和主要场景标牌。所有运行资源同源托管，无运行时 CDN 依赖。
