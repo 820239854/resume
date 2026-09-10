@@ -1,0 +1,29 @@
+{
+  "title": "猪猪侠",
+  "subtitle": "赤子侠心 · 掌震乾坤",
+  "technique": "降龙十八掌",
+  "tagline": "双掌起势 · 金龙破空",
+  "edition": "GG-018 / 001",
+  "collection": "武学奇遇 · 全息典藏",
+  "description": "以经典猪猪侠双掌起势为原型，短腿圆身，金龙盘绕。转动卡面，感受掌风与流光在层间交错。",
+  "parameters": {
+    "subjectScale": 1.25,
+    "subjectDepth": 0.4,
+    "backgroundDepth": -0.25,
+    "foil": 0.65
+  },
+  "safeArea": {
+    "scale": 1.04,
+    "offset": [
+      -0.02,
+      -0.065
+    ]
+  },
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "model": "./assets/card.glb"
+  }
+}
